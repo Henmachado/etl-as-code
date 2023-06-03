@@ -3,7 +3,7 @@ import json
 from pyspark.sql import DataFrame
 from pyspark.sql import SparkSession
 
-from typing import List, Callable
+from typing import List
 
 
 def get_local_spark_session() -> SparkSession:
@@ -18,7 +18,7 @@ def read_csv(spark_session, path: str) -> DataFrame:
         .option("header", "true")
         .option("treatEmptyValuesAsNulls", "true")
         .option("inferSchema", "true")
-        .load(f"Tables/{path}")
+        .load(f"data/raw/{path}")
     )
 
 

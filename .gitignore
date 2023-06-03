@@ -1,3 +1,5 @@
+spark-warehouse/
+
 .idea
 data/*
 dev.ipynb
